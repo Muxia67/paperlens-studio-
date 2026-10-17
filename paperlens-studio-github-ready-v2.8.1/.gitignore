@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+*.pdf
+.env
+.vscode/
+paperlens-backup-*.json
+*-格式化带读报告.html
+*-带读报告.doc
