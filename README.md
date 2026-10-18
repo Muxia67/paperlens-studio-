@@ -244,23 +244,3 @@ node paperlens-server.mjs
 先进入程序文件夹，关闭旧的 PaperLens 服务窗口，或在终端为服务器指定其他端口，例如 PowerShell：`$env:PORT=5174; node paperlens-server.mjs`。之后手动打开 `http://127.0.0.1:5174`；双击脚本仍会尝试打开默认的 5173 端口。
 
 </details>
-
-## 发布到 GitHub 前
-
-1. GitHub 首页读取仓库根目录的这份 `README.md`；程序与图片在 `paperlens-studio-github-ready-v2.8.1/` 中。发布新版本时保持两处说明和图片路径同步，不要只上传 ZIP。
-2. 确认仓库是公开还是私有；不要提交真实论文 PDF、工作台备份 JSON、API Key 或个人研究记录。本 README 中《蜀道与唐代绘画》的截图是真实使用画面，能看到论文页面、其他论文文件名和阅读状态；公开前请再次确认这些内容适合展示，并自行核实论文页面的展示权利。标注“合成示例”的图片不含真实论文。
-3. 检查程序文件夹中的 `LICENSE`：当前文件是待完善的许可文本，版权主体未填写。请在公开发布前自行决定许可并补全，不要把它误当成已经完成的授权声明。
-4. 上传后打开仓库首页，确认相对路径图片正常显示，并按上面的快速开始步骤实际运行一次。
-
-项目自检可在 `paperlens-studio-github-ready-v2.8.1` 目录依次运行：
-
-```bash
-node check-engine.mjs
-node check-page-mapping.mjs
-node check-read-memory.mjs
-node check-tour.mjs
-node check-layout.mjs
-node check-ui.mjs
-```
-
-这些脚本检查分析数据兼容、页码定位、跨论文发送范围、引导、布局和关键 UI 路径；它们不代替用真实论文做人工验收。
